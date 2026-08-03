@@ -1,0 +1,44 @@
+.river-visual {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  isolation: isolate;
+}
+
+.river-visual__base {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
+}
+
+.river-visual__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 160ms ease-out;
+}
+
+.river-visual__overlay--visible {
+  opacity: 1;
+}
+
+.river-visual__overlay--hidden {
+  opacity: 0;
+}
+
+.river-visual__loading {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #d4f8ff 0%, #9bddea 100%);
+}
